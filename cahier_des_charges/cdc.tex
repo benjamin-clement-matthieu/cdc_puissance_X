@@ -15,7 +15,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\mytitle}{Projet Gloup - Cahier des charges}
+\newcommand{\mytitle}{Projet Puissance X - Cahier des charges}
 \title{\mytitle } 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,9 +31,9 @@
 \cfoot{\@date}
 \rfoot{page \thepage / \pageref{fin}}
 
-\author{Ginette et Roger}
+\author{Benjamin cleton, Clement ansel et Matthieu laniesse}
 
-\date{1\ier~juin 2015}
+\date{29 mai 2017}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,10 +82,11 @@ Nostalgique de leur enfance, l'idée d'un puissance X leur est venu comme une é
 
 \paragraph{Besoins et priorités\\}
 Le besoin principal est de pouvoir jouer au puissance X de plusieurs manières :
-	-Ordinateur versus ordinateur
-	-Joueur versus ordinateur
-L'interface utilisateur se devra d'être simple et intuitive.
-Pour que le jeu puisse être jouer par le plus grand nombres.
+\begin{itemize}
+	\item Ordinateur versus ordinateur
+	\item Joueur versus ordinateur
+\end{itemize}
+Les priorités sont que le jeu puisse être jouer par le plus grand nombres, qu'il soit divertissant et enfin que l'interface utilisateur soit  simple et intuitive.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,32 +100,29 @@ Pour que le jeu puisse être jouer par le plus grand nombres.
     \item fonctionnalités du Puissance X :
         \begin{itemize}
         	\item Choisir le nombre de pions alignés permettant la victoire
+        	\item Choisir la taille de la grille
             \item Placer des jetons dans une grille
             \item Afficher les scores
             \item Choisir un Pseudonyme 
             \item Choisir un mode de jeu
             \item Choisir un degré de difficulté
+            \item Possibilité de revenir un coup en arrière
+            \item Implémentation d'un son après un coup joué
         \end{itemize}
     \item interface utilisateur :
         \begin{itemize}
             \item Affichage de la grille de jeu en deux dimensions
             \item Affichage des Pseudonymes et des joueurs
             \item Affichage des boutons de réglages
+            \item Affichage d'un temps de réflexion pour jouer
+            \item Affichage d'un menu après fin d'une partie
         \end{itemize}
     \item performances demandées :
         \begin{itemize}
             \item temps de réponse de l'ordinateur réglé en fonction de sa difficulté
             \item temps de réponse des actions inférieurs à 500ms
         \end{itemize}
-    \item fonctionnalités de réapprovisionnement :
-        \begin{itemize}
-            \item accès au webservice par protocole BSTP (Beer Supply Transport Protocol) RFC 1664 avec confirmation différée par appel téléphonique du fournisseur
-            \item page dédiée dans l'interface utilisateur : 
-                \begin{itemize}
-                    \item sélection des types de bière et quantités 
-                    \item sélection de la durée minimale avant confirmation téléphonique (0, 15 min, 30 min ou 1 h)
-                \end{itemize}
-        \end{itemize}
+
 \end{itemize}
 
 
@@ -137,34 +135,32 @@ Pour que le jeu puisse être jouer par le plus grand nombres.
 \section{Livrables}
 
 \begin{itemize}
-    \item logiciel déployé sur le grille-pain de Ginette
-    \item code source documenté sous licence WTFPL v2 
-    \item manuel d'installation et de configuration
-    \item manuel d'utilisation
+    \item Jeu déployé sur tout les ordinateurs vendu dans le commerce
+    \item code source documenté sous licence WTFPL v2 //
+    \item manuel d'installation et de configuration //
+    \item manuel d'utilisation //
 \end{itemize}
 
-\section{Diagrammes de cas d'utilisation}
 
-\includegraphics[width=11cm]{cdc_use_case.eps}
+
 
 
 
 
 \section{Maquettes}
 
-\paragraph{Page utilisation}
+\paragraph{Page du Menu Principal}
 
 ~\\
 
-\includegraphics[width=9cm]{cdc_maquette1.eps}
+\includegraphics[width=9cm]{image2.png}
 
-\paragraph{Page administration\\}
+\paragraph{Page de Jeu}
 
-...
+~\\
 
-\paragraph{Page approvisionnement\\}
+\includegraphics[width=13cm]{image1.png}
 
-...
 
 
 
