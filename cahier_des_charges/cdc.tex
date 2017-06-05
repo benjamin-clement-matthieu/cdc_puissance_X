@@ -31,7 +31,7 @@
 \cfoot{\@date}
 \rfoot{page \thepage / \pageref{fin}}
 
-\author{Benjamin cleton, Clement ansel et Matthieu laniesse}
+\author{Benjamin CLETON, Clement ANSEL et Matthieu LANIESSE}
 
 \date{29 mai 2017}
 
@@ -57,10 +57,10 @@ Puissance X
 Développement d'un jeu en tour par tour contre un ordinateur
 
 \paragraph{Maître d'ouvrage :}
-Benjamin cleton, Clement ansel, Matthieu laniesse
+Benjamin CLETON, Clement ANSEL, Matthieu LANIESSE
 
 \paragraph{Maître d'oeuvre : }
-Benjamin cleton, Clement ansel, Matthieu laniesse
+Benjamin CLLETON, Clement ANSEL, Matthieu LANIESSE
 
 \paragraph{Date de début :}
 29 mai 2017
@@ -85,8 +85,18 @@ Le besoin principal est de pouvoir jouer au puissance X de plusieurs manières :
 \begin{itemize}
 	\item Ordinateur versus ordinateur
 	\item Joueur versus ordinateur
+	\item Joueur versus Joueur
 \end{itemize}
-Les priorités sont que le jeu puisse être jouer par le plus grand nombres, qu'il soit divertissant et enfin que l'interface utilisateur soit  simple et intuitive.
+
+En ce qui concerne les priorités du puissance X, voici  un ordre de classement :
+\begin{itemize}
+	\item Interface
+	\item Logique du jeu
+	\item Intelligence Artificielle
+	\item Paramètres
+	\item Règles
+	\item Score
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,31 +106,29 @@ Les priorités sont que le jeu puisse être jouer par le plus grand nombres, qu'
 \section{Spécifications}
 
 \begin{itemize}
-    \item Jeu fonctionnant sur tous les ordinateurs vendu dans le commerce.
+    \item Jeu fonctionnant sur tous les ordinateurs vendus dans le commerce.
     \item fonctionnalités du Puissance X :
         \begin{itemize}
         	\item Choisir le nombre de pions alignés permettant la victoire
         	\item Choisir la taille de la grille
-            \item Placer des jetons dans une grille
-            \item Afficher les scores
-            \item Choisir un Pseudonyme 
-            \item Choisir un mode de jeu
-            \item Choisir un degré de difficulté
-            \item Possibilité de revenir un coup en arrière
-            \item Implémentation d'un son après un coup joué
+            	\item Placer des jetons dans une grille
+            	\item Afficher les scores
+            	\item Choisir un Pseudonyme 
+            	\item Choisir un mode de jeu
+            	\item Choisir un degré de difficulté
+		\item Choisir une IA en particulier
+            	\item Implémentation d'un son après un coup joué
         \end{itemize}
     \item interface utilisateur :
         \begin{itemize}
-            \item Affichage de la grille de jeu en deux dimensions
-            \item Affichage des Pseudonymes et des joueurs
-            \item Affichage des boutons de réglages
-            \item Affichage d'un temps de réflexion pour jouer
-            \item Affichage d'un menu après fin d'une partie
+            	\item Affichage de la grille de jeu en deux dimensions
+            	\item Affichage des Pseudonymes et des joueurs
+            	\item Affichage des boutons de réglages
+            	\item Affichage d'un menu après fin d'une partie
         \end{itemize}
     \item performances demandées :
         \begin{itemize}
-            \item temps de réponse de l'ordinateur réglé en fonction de sa difficulté
-            \item temps de réponse des actions inférieurs à 500ms
+            	\item Niveaux de difficultés différent pour chaque IA
         \end{itemize}
 
 \end{itemize}
@@ -136,9 +144,7 @@ Les priorités sont que le jeu puisse être jouer par le plus grand nombres, qu'
 
 \begin{itemize}
     \item Jeu déployé sur tout les ordinateurs vendu dans le commerce
-    \item code source documenté sous licence WTFPL v2 //
-    \item manuel d'installation et de configuration //
-    \item manuel d'utilisation //
+    \item code source programmé avec la bibliothèque open source Swing(Java)
 \end{itemize}
 
 
@@ -162,16 +168,6 @@ Les priorités sont que le jeu puisse être jouer par le plus grand nombres, qu'
 \includegraphics[width=13cm]{image1.png}
 
 
-
-
-
-
-\section{Planning prévisionnel}
-
-\includegraphics[width=13cm]{cdc_gantt.png}
-
-
-\section{...}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
