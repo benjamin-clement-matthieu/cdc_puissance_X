@@ -1,0 +1,307 @@
+% pdflatex -shell-escape template_rapport.tex
+
+\documentclass[a4paper,oneside]{article}
+
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{nopageno}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Rapport du projet Puissance X}
+\author{}
+\date{}
+
+\makeatletter
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\@title}
+\fancyfoot[C]{}
+\fancyfoot[R]{page \thepage / \pageref{myLastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\Large
+ULCO - L3 Informatique
+
+\vfill 
+
+\Huge
+\begin{center}
+\@title
+\end{center}
+
+\normalsize
+
+\vfill 
+
+\paragraph{Étudiants : Benjamin CLETON, Matthieu LANIESSE, Clément ANSEL }
+
+\paragraph{Encadrant : MAZYAD Ahmad}
+
+\paragraph{Date de début : 29 mai 2017}
+
+\paragraph{Date de fin : 16 juin 2017}
+
+\paragraph{Objet du projet : Développement d'un jeu avec une Intelligence Artificielle}
+
+~
+
+\vfill 
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\tableofcontents
+
+~\\
+\noindent\rule{\linewidth}{0.5pt}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Le projet de fin d'étude en Licence est une étape importante.
+A part le fait qu'elle constitue une note essentiel dans le semestre,
+elle nous apporte une vision de la réalisation d'un projet en entreprise.
+Ce projet qui consiste en la réalisation d'une application pour un "client", 
+est effectué en équipe, les membres de celle-ci sont :
+\begin{enumerate}
+	\item Benjamin CLETON
+	\item Matthieu LANIESSE
+	\item Clément ANSEL
+\end{enumerate}
+Nous allons voir dans un premier temps, la présentation du projet, en détaillant l'analyse de la demande qui correspond au thème, besoins, priorités ainsi que les spécifications.
+Dans un second temps, nous vous montrerons la réalisation du projet, sous formes
+de miniatures vous dévoilant le logiciel et sous la forme d'un diagramme de classe pour vous arborer les relations entre les différents éléments qui constituent le logiciel et dans un dernier point, nous conclurons par un bilan, exposant les points tant positifs que négatifs, ou encore si les objectifs ont bien étaient atteints.
+
+\section{Présentation du projet}
+
+\subsection{Analyse de la demande}
+
+Pour ce projet, nous avions le choix entre deux thèmes, le premier étant la réalisation d'un jeu en réseaux.
+Le second quant à lui étant la réalisation d'un jeu dans lequel on affronte une Intelligence Artificielle.
+Notre choix c'est porté sur le second thème.
+Pour mettre en œuvre ce projet, il a tout d'abord fallu réaliser un cahier des charges.
+Grâce à lui nous avons pu définir trois domaines prioritaire pour réaliser ce projet :
+\begin{enumerate}
+	\item Une Interface Graphique.
+	\item Un Moteur de jeu.
+	\item Une Intelligence Artificielle.
+\end{enumerate}
+Dans un premier temps nous avons réalisés la maquette du jeu ainsi que chaque fonctions des trois grands domaines ensemble. Matthieu s'est chargé d'implémenter l'interface Graphique, Benjamin du moteur du Jeu et Clément sur l'intelligence artificielle, 
+Il a fallu ensuite définir les besoins majeur qui permettront le succès du projet :
+\begin{enumerate}
+	\item Une catégorie Ordinateur VS Ordinateur.
+	\item Une catégorie Joueur VS Ordinateur.
+	\item Une catégorie Joueur VS Joueur.
+	\item Choisir la taille du Plateau.
+\end{enumerate}
+Une fois cette base établie, sachant que le projet se déroule sur 3 semaines, il a fallu planifier les étapes à atteindre à chaque fin de semaine, voici le planning :
+\begin{enumerate}
+	\item 1er semaine : interface graphique du plateau et implémentation d'une IA aléatoire.
+	\item 2ème semaine : interface graphique totale du jeu ainsi que l'implémentation d'une IA se basant sur l'algorithme Min-Max avec niveaux de difficultés.
+	\item 3ème semaine : Amélioration du design du jeu, ainsi que l'implémentation d'un son de victoire.
+\end{enumerate}
+
+
+\subsection{Spécifications}
+
+Les spécifications ont été une étape très importantes du projet, cela à permis de caractériser les fonctionnalités du Puissance X pour les trois domaines majeurs.
+
+
+En ce qui concerne le moteur du jeu, c'est a dire tout ce que l'on peut faire dans le jeu, nous avons déterminés :
+\begin{enumerate}
+    \item Choix du nombre de pions à aligner pour la victoire 
+    \item afficher les scores
+    \item Choix du Pseudonyme ou création d'un nouveau
+    \item Choix du degré de difficulté
+    \item activer/désactiver le son
+    \item Choix du mode de jeu
+\end{enumerate}
+
+
+Pour l'interface utilisateur, c'est à dire tout le rendu visuel, nous avons déterminés :
+\begin{enumerate}
+	\item affichage de la grille de jeu en deux dimensions
+	\item affichage des Pseudonymes et de la couleur de chaque joueurs lors de la partie
+	\item affichage des boutons de réglages, des modes de jeu ainsi que du scores
+	\item affichage d'un bouton commencer/recommencer et celui d'un retour Menu
+\end{enumerate}
+
+
+Pour les performances demandées, c'est à dire la puissance et vitesse de l'Intelligence Artificielle, nous avons déterminés :
+\begin{enumerate}
+	\item Niveaux de difficultés différent pour l'Intelligence Artificielle
+	\item Vitesse relativement rapide de L'Intelligence Artificielle
+\end{enumerate}
+
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Réalisation} 
+
+\subsection{Présentation }
+
+\paragraph{}
+Le jeu une fois lancé s'affiche dans une fenêtre graphique, qui permet à l'utilisateur de naviguer à travers le jeu et ainsi de faire ses choix.
+
+\begin{center}
+\includegraphics[width=10cm]{menu_principale.png}
+\end{center}
+
+\paragraph{}
+Pour arriver à ce résultat pour la fenêtre principale nous avons du répondre à la spécification 6 du moteur du jeu qui implémente le choix du mode de jeu. 
+Nous avons répondus à la spécification 3 de l'interface graphique, en affichant les boutons de réglages, des scores et des modes de jeu.
+
+
+\begin{center}
+\includegraphics[width=10cm]{options.png}
+\end{center}
+
+\paragraph{}
+Le menu options permet de choisir la difficulté de l'intelligence artificielle (spécification 4 du moteur de jeu et 1 de l'intelligence artificielle), la taille du puissance X, disponible en 4, 5 ou 6 (spécification 1 du moteur de jeu) et le choix d'activer un son lorsque l'on joue un coup et un son de victoire (spécification 5 du moteur de jeu).
+\vspace{2cm}
+
+\begin{center}
+	\includegraphics[width=10cm]{scores.png}
+\end{center}
+
+\paragraph{}
+En ce qui concerne la partie score, disponible depuis le menu principale, il affiche un tableau avec les pseudonymes enregistrés ainsi que le nombre de parties gagnées correspondant au pseudonyme sélectionné avant de jouer (spécification 2 du moteur de jeu)
+
+\begin{center}
+	\includegraphics[width=10cm]{pseudo.png}
+\end{center}
+
+\paragraph{}
+Une fois un mode de jeu choisi, il nous faut soit sélectionner un pseudo sauf quand l'on sélectionne le mode IA VS IA (spécification 3 du moteur de jeu)
+
+\begin{center}
+	\includegraphics[width=10cm]{partie.png}
+\end{center}
+
+\paragraph{}
+Et enfin le cœur du jeu, l'interface de déroulement de la partie, qui affiche les pseudonymes ainsi que la couleur de chaque joueur (spécification 2 de l'interface utilisateur), affichage de la grille en deux dimensions (spécification 1 de l'interface utilisateur) et d'un bouton commencer/recommencer et celui du retour menu (spécification 4 de l'interface utilisateur)
+
+\subsection{Architecture générale}
+Voici un diagramme de classe, montrant d'un point de vue logique la structure statique du jeu en indiquant :
+\begin{enumerate}
+	\item les objets et leurs structures qui composent le jeu
+	\item les liens entre les objets
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=18cm]{classdiagram2.png}
+\end{center}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Bilan}
+
+Nous voici maintenant dans la dernière partie de rapport, qui est le bilan.
+Je détaillerais d'abord les différences entre le jeu final et les prévisions, je parlerais ensuite des problèmes rencontrés puis pour finir des solutions adoptées.
+
+\subsection{Déroulement du projet}
+\subsubsection{Différence entre produit final et prévisions}
+\paragraph{}
+Quand on regarde le cahier des charges et le jeu final, la première chose que l'on remarque et qui devait se trouver dans le menu principale est l'onglet Règles, qui devait nous permettre d'avoir un résumé simple.
+Nous ne l'avons pas apposé en pensant que cela était inutile vu la popularité du jeu. Une des autres choses qui manque est le choix de la taille de la grille, que l'on a préférait définir de base par rapport au nombre de pions choisit pour obtenir une victoire (4, 5, 6 pions).
+Nous avons au final implémenté deux intelligences artificielles qui sont l'algorithme Min-Max pour la première puis une amélioration de celle-ci en Alpha-Bêta.
+Nous avions pensé mettre un menu qui apparait après la victoire d'un joueur ou ordinateur qui permettait de revenir au menu principale ou recommencer une partie ou quitter le logiciel mais nous ne l'avons pas introduit en nous rendant compte que toutes ces options étaient déjà présentes lors du déroulement de la partie.
+
+\subsubsection{Problèmes rencontrées}
+\paragraph{}
+Il y a eu deux gros problèmes lors de la réalisation de ce projet.
+Tout d'abord, le plus important à été GitHub, le début avait bien commencé avec une branche "master" et "develop" et une branche que chacun créée en local pour travailler.
+Mais n'ayant pas l'habitude de l'utiliser nous avons commencés à oublier de changer de branche, a faire de mauvais pull/push, etc.. ce qui a conduit à avoir un dossier de projet chambardé.
+Le dernier gros problème a été la prise de retard de l'intelligence artificielle, ANSEL Clément avait compris le fonctionnement de l'algorithme Min-Max mais n'arrivait pas à le développer(toujours des erreurs) et à le "relier" au jeu.
+
+\subsubsection{Solutions adoptés}
+\paragraph{}
+Les solutions que l'on a utilisé pour résoudre ces deux problèmes sont plutôt simple.
+En ce qui concerne GitHub, nous avons décidés de créer un nouveau répertoire et de repartir proprement avec une branche master qui correspondait à la premiere itération du jeu.
+Et pour la prise de retard de l'intelligence artificielle, Clément avait mis du pseudo code dans le fichier concerné par l'IA et nous avons décidé de travailler tous ensemble pour réussir à le réaliser. 
+
+
+\subsection{Réalisation des objectifs }
+
+\begin{tabular}{| l | c |}
+\hline
+fonctionnalité & réalisation \\
+\hline
+\hline
+Choisir le nombre de pions alignés permettant la victoire  & complète \\
+\hline
+Choisir la taille de la grille & non \\
+\hline
+Placer des jetons dans une grille & complète \\
+\hline
+Afficher les scores & complète \\
+\hline
+Choisir un Pseudonyme & complète \\
+\hline
+Choisir un mode de jeu & complète \\
+\hline
+Choisir un degré de difficulté & complète \\
+\hline
+Choisir une IA en particulier & non \\
+\hline
+Implémentation d'un son après un coup joué & complète \\
+\hline
+Affichage de la grille de jeu en deux dimensions & complète \\
+\hline
+Affichage des Pseudonymes et des joueurs & complète \\
+\hline
+Affichage d'un menu après la fin d'une partie & non \\
+\hline
+Niveaux de difficultés différent pour chaque IA & complète \\
+\hline
+\end{tabular}
+
+
+\subsection{Conclusion pour les projets futurs}
+
+Pour expliquer ce qui a bien fonctionné dans ce projet, c'est l'aide et la cohésion de groupe qui a permis de travailler efficacement et dans les délais impartis et en quasi-totale autonomie vis à vis de l'encadrant.
+Nous avons obtenus une vision plus claire de ce que pourrais être le développement d'un projet en entreprise.
+Nous avons beaucoup appris de nos erreurs, surtout en ce qui concerne GitHub, et son importance dans l'organisation d'un projet en équipe.
+Pour conclure, nous tenons à remercier notre encadrant M.MAZYAD Ahmad, ainsi que le directeur de ce projet M.DEHOS Julien, pour les bonnes conditions et le bon déroulement de ce projet. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\label{myLastPage}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
