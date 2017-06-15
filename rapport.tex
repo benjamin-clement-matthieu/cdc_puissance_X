@@ -82,8 +82,8 @@ ULCO - L3 Informatique
 \section{Introduction}
 
 Le projet de fin d'étude en Licence est une étape importante.
-A part le fait qu'elle constitue une note essentiel dans le semestre,
-elle nous apporte une vision de la réalisation d'un projet en entreprise.
+A part le fait qu'il constitue une note essentielle dans le semestre,
+il nous apporte une vision de la réalisation d'un projet en entreprise.
 Ce projet qui consiste en la réalisation d'une application pour un "client", 
 est effectué en équipe, les membres de celle-ci sont :
 \begin{enumerate}
@@ -101,36 +101,39 @@ de miniatures vous dévoilant le logiciel et sous la forme d'un diagramme de cla
 
 Pour ce projet, nous avions le choix entre deux thèmes, le premier étant la réalisation d'un jeu en réseaux.
 Le second quant à lui étant la réalisation d'un jeu dans lequel on affronte une Intelligence Artificielle.
-Notre choix c'est porté sur le second thème.
+Notre choix s'est porté sur le second thème.
 Pour mettre en œuvre ce projet, il a tout d'abord fallu réaliser un cahier des charges.
-Grâce à lui nous avons pu définir trois domaines prioritaire pour réaliser ce projet :
+Grâce à lui nous avons pu définir trois domaines prioritaires pour réaliser ce projet :
 \begin{enumerate}
 	\item Une Interface Graphique.
 	\item Un Moteur de jeu.
 	\item Une Intelligence Artificielle.
 \end{enumerate}
-Dans un premier temps nous avons réalisés la maquette du jeu ainsi que chaque fonctions des trois grands domaines ensemble. Matthieu s'est chargé d'implémenter l'interface Graphique, Benjamin du moteur du Jeu et Clément sur l'intelligence artificielle, 
-Il a fallu ensuite définir les besoins majeur qui permettront le succès du projet :
+Dans un premier temps nous avons réalisé la maquette du jeu ainsi que chaque fonctions des trois grands domaines ensemble. Matthieu s'est chargé d'implémenter l'interface Graphique, Benjamin du moteur du Jeu et Clément de l'intelligence artificielle, 
+Il a fallu ensuite définir les besoins majeurs qui permettront le succès du projet :
 \begin{enumerate}
 	\item Une catégorie Ordinateur VS Ordinateur.
 	\item Une catégorie Joueur VS Ordinateur.
 	\item Une catégorie Joueur VS Joueur.
-	\item Choisir la taille du Plateau.
+	\item Choisir le nombre de pions à aligner pour une victoire
 \end{enumerate}
 Une fois cette base établie, sachant que le projet se déroule sur 3 semaines, il a fallu planifier les étapes à atteindre à chaque fin de semaine, voici le planning :
 \begin{enumerate}
-	\item 1er semaine : interface graphique du plateau et implémentation d'une IA aléatoire.
-	\item 2ème semaine : interface graphique totale du jeu ainsi que l'implémentation d'une IA se basant sur l'algorithme Min-Max avec niveaux de difficultés.
-	\item 3ème semaine : Amélioration du design du jeu, ainsi que l'implémentation d'un son de victoire.
+	\item 1er semaine : interface graphique du plateau, implémentation d'une IA aléatoire et fonctions de base du moteur du jeu.
+	\item 2ème semaine : interface graphique totale du jeu, implémentation d'une IA se basant sur l'algorithme Min-Max avec niveaux de difficultés et version finale du moteur du jeu
+	\item 3ème semaine : Amélioration du design du jeu, ainsi que de l'algorithme Min-Max en Alpha-Beta et implémentation d'un son de victoire.
 \end{enumerate}
 
+\clearpage
 
 \subsection{Spécifications}
 
+
 Les spécifications ont été une étape très importantes du projet, cela à permis de caractériser les fonctionnalités du Puissance X pour les trois domaines majeurs.
 
+\vspace{0.5cm}
 
-En ce qui concerne le moteur du jeu, c'est a dire tout ce que l'on peut faire dans le jeu, nous avons déterminés :
+En ce qui concerne le moteur du jeu, c'est à dire tout ce que l'on peut faire dans le jeu, nous avons déterminés :
 \begin{enumerate}
     \item Choix du nombre de pions à aligner pour la victoire 
     \item afficher les scores
@@ -139,20 +142,21 @@ En ce qui concerne le moteur du jeu, c'est a dire tout ce que l'on peut faire da
     \item activer/désactiver le son
     \item Choix du mode de jeu
 \end{enumerate}
+\vspace{0.5cm}
 
 
 Pour l'interface utilisateur, c'est à dire tout le rendu visuel, nous avons déterminés :
 \begin{enumerate}
 	\item affichage de la grille de jeu en deux dimensions
 	\item affichage des Pseudonymes et de la couleur de chaque joueurs lors de la partie
-	\item affichage des boutons de réglages, des modes de jeu ainsi que du scores
+	\item affichage des boutons de réglages, des modes de jeu ainsi que des scores
 	\item affichage d'un bouton commencer/recommencer et celui d'un retour Menu
 \end{enumerate}
-
+\vspace{0.5cm}
 
 Pour les performances demandées, c'est à dire la puissance et vitesse de l'Intelligence Artificielle, nous avons déterminés :
 \begin{enumerate}
-	\item Niveaux de difficultés différent pour l'Intelligence Artificielle
+	\item Différents niveaux de difficultés pour l'Intelligence Artificielle
 	\item Vitesse relativement rapide de L'Intelligence Artificielle
 \end{enumerate}
 
@@ -168,15 +172,15 @@ Pour les performances demandées, c'est à dire la puissance et vitesse de l'Int
 \subsection{Présentation }
 
 \paragraph{}
-Le jeu une fois lancé s'affiche dans une fenêtre graphique, qui permet à l'utilisateur de naviguer à travers le jeu et ainsi de faire ses choix.
+Le jeu une fois lancé s'affiche dans une fenêtre graphique, qui permet à l'utilisateur de naviguer à travers le jeu. Il est ainsi libre de ses choix.
 
 \begin{center}
 \includegraphics[width=10cm]{menu_principale.png}
 \end{center}
 
 \paragraph{}
-Pour arriver à ce résultat pour la fenêtre principale nous avons du répondre à la spécification 6 du moteur du jeu qui implémente le choix du mode de jeu. 
-Nous avons répondus à la spécification 3 de l'interface graphique, en affichant les boutons de réglages, des scores et des modes de jeu.
+Pour obtenir cette fenêtre principale nous avons du répondre à la spécification 6 du moteur du jeu qui implémente le choix du mode de jeu. 
+Nous avons répondu à la spécification 3 de l'interface graphique, en affichant les boutons de réglages, des scores et des modes de jeu.
 
 
 \begin{center}
@@ -192,21 +196,21 @@ Le menu options permet de choisir la difficulté de l'intelligence artificielle 
 \end{center}
 
 \paragraph{}
-En ce qui concerne la partie score, disponible depuis le menu principale, il affiche un tableau avec les pseudonymes enregistrés ainsi que le nombre de parties gagnées correspondant au pseudonyme sélectionné avant de jouer (spécification 2 du moteur de jeu)
+En ce qui concerne la partie score, disponible depuis le menu principale, il affiche un tableau avec les pseudonymes enregistrés ainsi que le nombre de parties gagnées correspondant au pseudonyme sélectionné avant de jouer (spécification 2 du moteur de jeu).
 
 \begin{center}
 	\includegraphics[width=10cm]{pseudo.png}
 \end{center}
 
 \paragraph{}
-Une fois un mode de jeu choisi, il nous faut soit sélectionner un pseudo sauf quand l'on sélectionne le mode IA VS IA (spécification 3 du moteur de jeu)
+Une fois un mode de jeu choisi, il nous faut sélectionner un pseudo sauf lors de la sélection du mode IA VS IA (spécification 3 du moteur de jeu).
 
 \begin{center}
 	\includegraphics[width=10cm]{partie.png}
 \end{center}
 
 \paragraph{}
-Et enfin le cœur du jeu, l'interface de déroulement de la partie, qui affiche les pseudonymes ainsi que la couleur de chaque joueur (spécification 2 de l'interface utilisateur), affichage de la grille en deux dimensions (spécification 1 de l'interface utilisateur) et d'un bouton commencer/recommencer et celui du retour menu (spécification 4 de l'interface utilisateur)
+Et enfin le cœur du jeu, l'interface de déroulement de la partie, qui affiche les pseudonymes ainsi que la couleur de chaque joueurs (spécification 2 de l'interface utilisateur), affichage de la grille en deux dimensions (spécification 1 de l'interface utilisateur) et d'un bouton commencer/recommencer et celui du retour menu (spécification 4 de l'interface utilisateur)
 
 \subsection{Architecture générale}
 Voici un diagramme de classe, montrant d'un point de vue logique la structure statique du jeu en indiquant :
@@ -219,6 +223,9 @@ Voici un diagramme de classe, montrant d'un point de vue logique la structure st
 \includegraphics[width=18cm]{classdiagram2.png}
 \end{center}
 
+\paragraph{}
+Enfin, comme convenu dans le cahier des charges, le logiciel fonctionne sur l'environnement Linux, en utilisant l'IDE eclipse-java avec les bibliothèques swing et awt.
+
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,27 +233,27 @@ Voici un diagramme de classe, montrant d'un point de vue logique la structure st
 
 \section{Bilan}
 
-Nous voici maintenant dans la dernière partie de rapport, qui est le bilan.
-Je détaillerais d'abord les différences entre le jeu final et les prévisions, je parlerais ensuite des problèmes rencontrés puis pour finir des solutions adoptées.
+Nous voici maintenant dans la dernière partie du rapport, le bilan. 
+Nous détaillerons d'abord les différences entre le jeu final et les prévisions, nous parlerons ensuite des problèmes rencontrés puis pour finir des solutions adoptées.
 
 \subsection{Déroulement du projet}
 \subsubsection{Différence entre produit final et prévisions}
 \paragraph{}
-Quand on regarde le cahier des charges et le jeu final, la première chose que l'on remarque et qui devait se trouver dans le menu principale est l'onglet Règles, qui devait nous permettre d'avoir un résumé simple.
-Nous ne l'avons pas apposé en pensant que cela était inutile vu la popularité du jeu. Une des autres choses qui manque est le choix de la taille de la grille, que l'on a préférait définir de base par rapport au nombre de pions choisit pour obtenir une victoire (4, 5, 6 pions).
-Nous avons au final implémenté deux intelligences artificielles qui sont l'algorithme Min-Max pour la première puis une amélioration de celle-ci en Alpha-Bêta.
-Nous avions pensé mettre un menu qui apparait après la victoire d'un joueur ou ordinateur qui permettait de revenir au menu principale ou recommencer une partie ou quitter le logiciel mais nous ne l'avons pas introduit en nous rendant compte que toutes ces options étaient déjà présentes lors du déroulement de la partie.
+Quand on regarde le cahier des charges et le jeu final, la première chose que l'on remarque et qu'il manque l'onglet Règles, qui devait nous permettre d'avoir un résumé simple.
+Nous ne l'avons pas apposé, pensant que cela était inutile vu la popularité du jeu. Une des autres choses qui manque est le choix de la taille de la grille, que l'on a préférait définir de base par rapport au nombre de pions choisit pour obtenir une victoire (4, 5, 6 pions).
+Nous avons au final implémenté deux intelligences artificielles qui sont l'algorithme Min-Max puis une amélioration de celle-ci : l'Alpha-Bêta.
+Nous avions pensé mettre un menu qui apparaitrait après la victoire d'un joueur ou ordinateur qui permettait de revenir au menu principale ou de recommencer une partie ou de quitter le logiciel mais nous ne l'avons pas introduit en nous rendant compte que toutes ces options étaient déjà présentes lors du déroulement de la partie.
 
-\subsubsection{Problèmes rencontrées}
+\subsubsection{Problèmes rencontrés}
 \paragraph{}
 Il y a eu deux gros problèmes lors de la réalisation de ce projet.
 Tout d'abord, le plus important à été GitHub, le début avait bien commencé avec une branche "master" et "develop" et une branche que chacun créée en local pour travailler.
 Mais n'ayant pas l'habitude de l'utiliser nous avons commencés à oublier de changer de branche, a faire de mauvais pull/push, etc.. ce qui a conduit à avoir un dossier de projet chambardé.
-Le dernier gros problème a été la prise de retard de l'intelligence artificielle, ANSEL Clément avait compris le fonctionnement de l'algorithme Min-Max mais n'arrivait pas à le développer(toujours des erreurs) et à le "relier" au jeu.
+Le dernier gros problème a été la prise de retard de l'intelligence artificielle, ANSEL Clément avait compris le fonctionnement de l'algorithme Min-Max mais n'arrivait pas à le développer (toujours des erreurs) et à le "relier" au jeu.
 
-\subsubsection{Solutions adoptés}
+\subsubsection{Solutions adoptées}
 \paragraph{}
-Les solutions que l'on a utilisé pour résoudre ces deux problèmes sont plutôt simple.
+Les solutions que l'on a utilisé pour résoudre ces deux problèmes sont plutôt simples.
 En ce qui concerne GitHub, nous avons décidés de créer un nouveau répertoire et de repartir proprement avec une branche master qui correspondait à la premiere itération du jeu.
 Et pour la prise de retard de l'intelligence artificielle, Clément avait mis du pseudo code dans le fichier concerné par l'IA et nous avons décidé de travailler tous ensemble pour réussir à le réaliser. 
 
@@ -289,7 +296,7 @@ Niveaux de difficultés différent pour chaque IA & complète \\
 
 \subsection{Conclusion pour les projets futurs}
 
-Pour expliquer ce qui a bien fonctionné dans ce projet, c'est l'aide et la cohésion de groupe qui a permis de travailler efficacement et dans les délais impartis et en quasi-totale autonomie vis à vis de l'encadrant.
+Un des point positif dans ce projet a été l'aide et la cohésion de groupe qui a permis de travailler efficacement et dans les délais impartis et en quasi-totale autonomie vis à vis de l'encadrant.
 Nous avons obtenus une vision plus claire de ce que pourrais être le développement d'un projet en entreprise.
 Nous avons beaucoup appris de nos erreurs, surtout en ce qui concerne GitHub, et son importance dans l'organisation d'un projet en équipe.
 Pour conclure, nous tenons à remercier notre encadrant M.MAZYAD Ahmad, ainsi que le directeur de ce projet M.DEHOS Julien, pour les bonnes conditions et le bon déroulement de ce projet. 
